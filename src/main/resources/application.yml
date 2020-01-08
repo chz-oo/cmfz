@@ -1,0 +1,37 @@
+#服务器相关
+server:
+  port: 8989
+  servlet:
+    context-path: /cmfz
+    jsp:
+      init-parameters:
+        development: true
+#链接数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cmfz
+  #视图解析器
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  #设置文件上传的大小
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+  #配代理方式为cglib
+  aop:
+    proxy-target-class: true
+#mybatis
+mybatis:
+  type-aliases-package: com.baizhi.chz.entity
+  mapper-locations: classpath:com/baizhi/chz/mapper/*DaoMapper.xml
+#日志级别
+logging:
+  level:
+    root: info

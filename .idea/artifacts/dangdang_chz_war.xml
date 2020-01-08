@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dangdang_chz:war">
+    <output-path>E:/MyEclipse_14_2/dangdang_chz/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dangdang_chz</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="dangdang_chz.war">
+      <element id="artifact" artifact-name="dangdang_chz:war exploded" />
+    </root>
+  </artifact>
+</component>
